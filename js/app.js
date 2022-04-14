@@ -135,22 +135,26 @@ window.addEventListener('scroll', function(event) {
 // Scroll to anchor ID using scrollTO event
 
 let inView = document.getElementById("sec1");
-inView.onclick= function scrollToView(){
+inView.onclick= function scrollToView(evt){
+  evt.preventDefault();
   section1.classList.add("your-active-class");
-  section1.scrollIntoView(true);
+  section1.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 };
 let inView2 = document.getElementById("sec2");
-inView2.onclick= function scrollToView(){
-  section2.scrollIntoView(true);
+inView2.onclick= function scrollToView(evt){
+  evt.preventDefault();
+  section2.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
   section2.classList.add("your-active-class");
 };
 let inView3 = document.getElementById("sec3");
-inView3.onclick= function scrollToView(){
-  section3.scrollIntoView(true);
+inView3.onclick= function scrollToView(evt){
+  evt.preventDefault();
+  section3.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
   section3.classList.add("your-active-class");
 };
 let inView4 = document.getElementById("sec4");
-inView4.onclick= function scrollToView(){
+inView4.onclick= function scrollToView(evt){
+  evt.preventDefault();
   let sectionFour = document.createElement("section");
   sectionFour.setAttribute("id", "section4");
   sectionFour.innerHTML= `<div class="landing__container">
@@ -162,7 +166,7 @@ inView4.onclick= function scrollToView(){
   main.appendChild(sectionFour);
   let section4 = document.getElementById("section4");
   section4.classList.add("your-active-class");
-  section4.scrollIntoView(true);
+  section4.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
   window.addEventListener("scroll", function(){
     if(activeViewport(section4)){
       inView4.classList.add("inview-link")
