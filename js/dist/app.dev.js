@@ -40,6 +40,12 @@ var mybutton = document.getElementById("myBtn");
 mybutton.addEventListener("click", function () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+
+  if (sectionFour.id === "secion4") {
+    console.log("hello");
+  } else {
+    console.log("no");
+  }
 });
 
 window.onscroll = function () {
@@ -173,10 +179,18 @@ var inView4 = document.getElementById("sec4");
 
 inView4.onclick = function scrollToView(evt) {
   evt.preventDefault();
-  var sectionFour = document.createElement("section");
-  sectionFour.setAttribute("id", "section4");
-  sectionFour.innerHTML = "<div class=\"landing__container\">\n                            <h2>Section 4</h2>\n                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>\n\n                            <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>\n                          </div>";
-  main.appendChild(sectionFour);
+  var dem = document.getElementById("section4");
+
+  if (main.contains(dem)) {} else {
+    var _sectionFour = document.createElement("section");
+
+    _sectionFour.setAttribute("id", "section4");
+
+    _sectionFour.innerHTML = "<div class=\"landing__container\">\n                            <h2>Section 4</h2>\n                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>\n\n                            <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>\n                            </div>";
+    main.appendChild(_sectionFour);
+  }
+
+  ;
   var section4 = document.getElementById("section4");
   section4.classList.add("your-active-class");
   section4.scrollIntoView({
