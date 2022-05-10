@@ -58,7 +58,6 @@ function scrollFunction() {
  * Begin Main Functions
  * 
 */
-
 // build the nav
 //Creating the navigation links using a list of links, looping and adding each link to the nav
 let listItems = ['Section1', 'Section2', 'Section3', 'Section4'];
@@ -88,7 +87,7 @@ window.addEventListener("scroll", activeM); */
 let activeViewport = function(elem) {
   let distance = elem.getBoundingClientRect();
   return (
-    distance.top >= -80 &&
+    distance.top >= -500 &&
     distance.left >= 0 &&
     distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
     distance.right <= (window.innerWidth || document.documentElement.clientWidth)

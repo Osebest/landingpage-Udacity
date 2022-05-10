@@ -92,7 +92,7 @@ window.addEventListener("scroll", activeM); */
 
 var activeViewport = function activeViewport(elem) {
   var distance = elem.getBoundingClientRect();
-  return distance.top >= -80 && distance.left >= 0 && distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) && distance.right <= (window.innerWidth || document.documentElement.clientWidth);
+  return distance.top >= -500 && distance.left >= 0 && distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) && distance.right <= (window.innerWidth || document.documentElement.clientWidth);
 };
 
 window.addEventListener('scroll', function (event) {
